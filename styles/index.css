@@ -1,12 +1,7 @@
-html {
-  height: 100vh;
-}
 body {
   position: relative;
   font-family: "S-CoreDream-3Light";
 
-  height: 100vh;
-  margin: 0;
   background: rgb(63, 104, 185);
   background: linear-gradient(
     152deg,
@@ -14,6 +9,8 @@ body {
     rgba(122, 160, 169, 1) 63%,
     rgba(195, 238, 210, 1) 100%
   );
+  background-attachment: fixed;
+  background-size: cover;
   -ms-user-select: none;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
@@ -32,6 +29,10 @@ body {
   padding: 2em;
   text-align: center;
 }
+#icon-cal {
+  position: relative;
+  overflow: hidden;
+}
 #iconImg {
   opacity: 0.4;
   animation-name: iconEvent;
@@ -39,10 +40,13 @@ body {
 }
 #iconImg:hover {
   opacity: 0.8;
+  cursor: pointer;
+  animation-name: iconHoverEvent;
 }
-#icon-cal {
-  position: relative;
-  overflow: hidden;
+#iconImg:active {
+  animation-name: iconActiveEvent;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 #container #title-main {
   font-family: "S-CoreDream-9Black";
@@ -122,5 +126,38 @@ body {
   to {
     opacity: 0.4;
     transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes iconHoverEvent {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+@keyframes iconActiveEvent {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
   }
 }
