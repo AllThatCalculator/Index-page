@@ -21,6 +21,7 @@ body{
 }
 #icon-cal{
     position: relative;
+    opacity: 0.4;
 }
 #container>#title-main{
     font-family:'S-CoreDream-9Black';
