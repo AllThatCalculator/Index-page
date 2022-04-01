@@ -1,68 +1,126 @@
-html{height: 100%;}
-body{
-    position: relative;
-    font-family: 'S-CoreDream-3Light';
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  font-family: "S-CoreDream-3Light";
 
-    height: 100%; margin: 0;
-    background: rgb(63,104,185);
-    background: linear-gradient(152deg, rgba(63,104,185,1) 0%, rgba(122,160,169,1) 63%, rgba(195,238,210,1) 100%);
+  height: 100%;
+  margin: 0;
+  background: rgb(63, 104, 185);
+  background: linear-gradient(
+    152deg,
+    rgba(63, 104, 185, 1) 0%,
+    rgba(122, 160, 169, 1) 63%,
+    rgba(195, 238, 210, 1) 100%
+  );
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
-#wrap{
-    position: relative;
-    min-width: 1080px;
+#wrap {
+  position: relative;
+  min-width: 1080px;
 }
-#header{
-    position: relative;
-    height: 72px;
+#header {
+  position: relative;
+  height: 72px;
 }
-#container{
-    padding: 2em;
-    text-align: center;
+#container {
+  padding: 2em;
+  text-align: center;
 }
-#icon-cal{
-    position: relative;
+#iconImg {
+  opacity: 0.4;
+  animation-name: iconEvent;
+  animation-duration: 1.3s;
+}
+#iconImg:hover {
+  opacity: 0.8;
+}
+#icon-cal {
+  position: relative;
+  overflow: hidden;
+}
+#container #title-main {
+  font-family: "S-CoreDream-9Black";
+  font-size: 84px;
+  color: #fff;
+  text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+
+  animation-name: titleEvent-main;
+  animation-duration: 1.3s;
+}
+#container #title-sub {
+  position: relative;
+  margin: 1.2em;
+
+  font-family: "S-CoreDream-4Regular";
+  font-size: 24px;
+  color: #fff;
+}
+.box {
+  animation-name: titleEvent-sub;
+  animation-duration: 1.3s;
+}
+#box-ex {
+  position: relative;
+  margin: 0 auto;
+  width: 850px;
+}
+#box-ex #explain {
+  padding: 1.5em;
+
+  font-size: 24px;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.63);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+}
+#box-line {
+  padding: 5em;
+  position: relative;
+  margin: 0 auto;
+  width: 830px;
+}
+#box-line > #comingsoon {
+  margin: 0 2em;
+  font-family: "S-CoreDream-3Light";
+  font-size: 32px;
+  color: #fff;
+  float: left;
+}
+#box-line > #line {
+  float: left;
+}
+
+/*애니매이션*/
+@keyframes titleEvent-main {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes titleEvent-sub {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes iconEvent {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
     opacity: 0.4;
-}
-#container>#title-main{
-    font-family:'S-CoreDream-9Black';
-    font-size: 84px;
-    color: #fff;
-    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
-}
-#container>#title-sub{
-    position: relative;
-    margin: 1.2em;
-
-    font-family:'S-CoreDream-4Regular';
-    font-size: 24px;
-    color: #fff;
-}
-#box-ex{
-    position: relative;
-    margin: 0 auto;
-    width: 850px;
-}
-#box-ex>#explain{
-    padding: 1.5em;
-
-    font-size: 24px;
-    border-radius: 18px;
-    background-color: rgba(255, 255, 255, 0.63);
-    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
-}
-#box-line{
-    padding: 5em;
-    position: relative;
-    margin: 0 auto;
-    width: 830px;
-}
-#box-line>#comingsoon{
-    margin: 0 2em;
-    font-family:'S-CoreDream-3Light';
-    font-size: 32px;
-    color: #fff;
-    float: left;
-}
-#box-line>#line{
-    float: left;
+    transform: translate3d(0, 0, 0);
+  }
 }
