@@ -27,11 +27,22 @@ body {
 }
 #header {
   position: relative;
+  text-align: center;
   height: 7rem;
 }
 #container {
   padding: 2rem;
   text-align: center;
+}
+#language-button {
+  cursor: pointer;
+  position: relative;
+  padding-left: 1000px;
+}
+#languageImg:active {
+  animation-name: iconActiveEvent;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 #icon-cal {
   position: relative;
