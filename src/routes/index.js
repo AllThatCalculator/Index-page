@@ -18,7 +18,7 @@ function change() {
 }
 
 function init(){
-    const subs = document.querySelector("#language-button"); //#: id, 버튼 찾기
+    const subs = document.querySelector("#languageImg"); //#: id, 버튼 찾기
     console.dir(subs);
     subs.addEventListener("click", change); //버튼 이벤트 .addEventListener("click", <함수 이름>);
 }
