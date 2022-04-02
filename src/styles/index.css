@@ -34,10 +34,10 @@ body {
   padding: 2rem;
   text-align: center;
 }
-#language-button {
+#languageImg {
   cursor: pointer;
   position: relative;
-  padding-left: 1000px;
+  margin-left: 1000px;
 }
 #languageImg:active {
   animation-name: iconActiveEvent;
